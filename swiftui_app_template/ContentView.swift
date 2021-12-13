@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Namespace var namespace
+    @State var show = false
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            if !show {
+                Text("StyleGAN")
+                    .padding().frame(width: .infinity,
+                                     alignment: .leading)
+            } else {
+                Text("StyleGAN")
+                    .padding().frame(width: .infinity,
+                                     alignment: .trailing)
+            }
+        }.onTapGesture {
+            withAnimation{
+                show.toggle()
+                
+            }
+        }
     }
 }
 
