@@ -32,29 +32,40 @@ struct ContentView: View {
                                     .aspectRatio(contentMode: .fill)
                                     .matchedGeometryEffect(id: "background", in: namespace)
                     )
+                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                            .matchedGeometryEffect(id: "mask", in: namespace)
+                            )
+                    .frame(height:300)
                     .padding(20)
                 } else {
                     
-                    VStack(alignment:.leading, spacing: 12){
-                        Spacer()
-                        Text("Image generation with StyleGAN and CLIP".uppercased())
-                            .font(.footnote.weight(.semibold))
-                            .matchedGeometryEffect(id: "subtitle", in: namespace)
-                        Text("StyleGAN")
-                            .font(.largeTitle.weight(.black))
-                            .matchedGeometryEffect(id: "title", in: namespace)
-                            .frame(maxWidth: .infinity,
-                                   alignment: .leading)
-                        
+                    ScrollView {
+                        VStack(alignment:.leading, spacing: 12){
+                            Spacer()
+                            Text("Image generation with StyleGAN and CLIP".uppercased())
+                                .font(.footnote.weight(.semibold))
+                                .matchedGeometryEffect(id: "subtitle", in: namespace)
+                            Text("StyleGAN")
+                                .font(.largeTitle.weight(.black))
+                                .matchedGeometryEffect(id: "title", in: namespace)
+                                .frame(maxWidth: .infinity,
+                                       alignment: .leading)
+                            
+                            
+                        }
+                        .frame(height:500)
+                        .padding(20)
+                        .foregroundColor(.white)
+                        .background(Image("pro1_out")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .matchedGeometryEffect(id: "background", in: namespace)
+                                    )
+                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                                .matchedGeometryEffect(id: "mask", in: namespace)
+                        )
                         
                     }
-                    .padding(20)
-                    .foregroundColor(.white)
-                    .background(Image("pro1_out")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .matchedGeometryEffect(id: "background", in: namespace)
-                                )
                 }
             
             }.onTapGesture {
