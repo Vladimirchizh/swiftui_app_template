@@ -13,7 +13,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-                if !show {
+                if !show { 
                     VStack{
                         Spacer()
                         VStack(alignment:.leading, spacing: 12) {
