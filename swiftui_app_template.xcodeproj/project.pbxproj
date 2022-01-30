@@ -16,6 +16,8 @@
 		7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2627A1F66F008C0B12 /* HomeView.swift */; };
 		7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */; };
 		7D48575F27A699390068D458 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D48575E27A699390068D458 /* SwiftUIView.swift */; };
+		7DEF700E27A702050001D414 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700D27A702050001D414 /* TabBar.swift */; };
+		7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700F27A707CD0001D414 /* FeaturedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		7D186A2627A1F66F008C0B12 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		7D48575E27A699390068D458 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		7DEF700D27A702050001D414 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		7DEF700F27A707CD0001D414 /* FeaturedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 				18C708E5276777380023CC15 /* Assets.xcassets */,
 				18C708EA276777380023CC15 /* Info.plist */,
 				18C708E7276777380023CC15 /* Preview Content */,
+				7DEF700F27A707CD0001D414 /* FeaturedData.swift */,
 			);
 			path = swiftui_app_template;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		7D186A2427A1EB97008C0B12 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				7DEF700D27A702050001D414 /* TabBar.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -294,7 +300,9 @@
 			files = (
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,
 				7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */,
+				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
 				18C708E4276777350023CC15 /* ContentView.swift in Sources */,
+				7DEF700E27A702050001D414 /* TabBar.swift in Sources */,
 				18C708E2276777350023CC15 /* swiftui_app_templateApp.swift in Sources */,
 				7D48575F27A699390068D458 /* SwiftUIView.swift in Sources */,
 			);
