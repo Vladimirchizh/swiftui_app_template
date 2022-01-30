@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct FeaturedItem: View {
+    var course: Course = courses[0]
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0){
             Spacer()
-            Image("Image")
+            Image(systemName: course.logo)
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 26.0, height: 26.0)
@@ -19,16 +20,16 @@ struct FeaturedItem: View {
                 .padding(9)
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
              // .strokeStyle(cornerRadius(16))
-            Text("Основной курс")
+            Text(course.title)
                 .font(.largeTitle)
-                .fontWeight(.semibold)
+            //.fontWeight(.semibold)
                 .frame(maxWidth: .infinity,
                    alignment: .leading)
-            Text("20 sections - 3 hours".uppercased())
+            Text(course.subtitle.uppercased())
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .foregroundStyle(.secondary)
-            Text("do your homework with us while you are on the go")
+            Text(course.text)
                 .font(.footnote)
                 .multilineTextAlignment(.leading)
                 .foregroundColor(.secondary)
@@ -44,11 +45,11 @@ struct FeaturedItem: View {
         .padding(.horizontal, 20)
         
         .overlay(
-            Image("Group 36")
+            Image(course.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: 230)
-                .offset(x:32, y: -70)
+                .offset(x:32, y: -90)
         )
     }
 

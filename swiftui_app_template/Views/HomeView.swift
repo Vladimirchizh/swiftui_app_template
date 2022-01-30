@@ -13,8 +13,8 @@ struct HomeView: View {
     var body: some View {
        ScrollView{
            TabView{
-               ForEach(0..<5){ item in
-                   FeaturedItem()
+               ForEach(courses){ item in
+                   FeaturedItem(course: item)
                    
                }
            }

@@ -13,6 +13,13 @@ struct Course: Identifiable{
     var subtitle: String
     var text: String
     var image: String
+    var logo: String
 }
 
 
+var courses = [
+    
+    Course(title: "Домашнее задание", subtitle: "Просмотренно", text: "Задания от вашего преподавателя на следующее занятие", image: "Group 36", logo: "house"),
+    Course(title: "Карточки", subtitle: "Изучайте язык по карточкам", text: "Новые слова пригодятся на следующем уроке", image: "Group 15", logo: "greetingcard"),
+    Course(title: "Календарь занятий", subtitle: "Пройдено 4/10 занятий", text: "Следующее занятие 20.02", image: "Group 3", logo: "calendar")
+]
