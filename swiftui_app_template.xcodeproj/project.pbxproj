@@ -15,7 +15,9 @@
 		18C708FF276777380023CC15 /* swiftui_app_templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C708FE276777380023CC15 /* swiftui_app_templateUITests.swift */; };
 		7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2627A1F66F008C0B12 /* HomeView.swift */; };
 		7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */; };
-		7D48575F27A699390068D458 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D48575E27A699390068D458 /* SwiftUIView.swift */; };
+		7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419C27A7C819004D4D21 /* CourseItem.swift */; };
+		7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419E27A7C9FC004D4D21 /* CourseView.swift */; };
+		7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A41A027A7F435004D4D21 /* LavaItem.swift */; };
 		7DEF700E27A702050001D414 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700D27A702050001D414 /* TabBar.swift */; };
 		7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700F27A707CD0001D414 /* FeaturedData.swift */; };
 /* End PBXBuildFile section */
@@ -52,7 +54,9 @@
 		18C70900276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D186A2627A1F66F008C0B12 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
-		7D48575E27A699390068D458 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		7D9A419C27A7C819004D4D21 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
+		7D9A419E27A7C9FC004D4D21 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		7D9A41A027A7F435004D4D21 /* LavaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaItem.swift; sourceTree = "<group>"; };
 		7DEF700D27A702050001D414 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		7DEF700F27A707CD0001D414 /* FeaturedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				7D186A2627A1F66F008C0B12 /* HomeView.swift */,
+				7D9A419E27A7C9FC004D4D21 /* CourseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */,
-				7D48575E27A699390068D458 /* SwiftUIView.swift */,
+				7D9A419C27A7C819004D4D21 /* CourseItem.swift */,
+				7D9A41A027A7F435004D4D21 /* LavaItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -298,13 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,
 				7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */,
+				7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */,
 				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
+				7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */,
 				18C708E4276777350023CC15 /* ContentView.swift in Sources */,
 				7DEF700E27A702050001D414 /* TabBar.swift in Sources */,
 				18C708E2276777350023CC15 /* swiftui_app_templateApp.swift in Sources */,
-				7D48575F27A699390068D458 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     @Namespace var namespace
     @State var show = false
-
+    @State private var animate = false
+    
+    
     var body: some View {
+        
         ZStack {
                 if !show { 
                     VStack{
                         Spacer()
                         VStack(alignment:.leading, spacing: 12) {
                             Text("StyleGAN")
-                                .font(.largeTitle.weight(.black))
+                                .font(.largeTitle)
                                 .matchedGeometryEffect(id: "title", in: namespace)
                                 .frame(maxWidth: .infinity,
                                    alignment: .leading)
@@ -42,10 +47,8 @@ struct ContentView: View {
                                     .aspectRatio(contentMode: .fit )
                                     .matchedGeometryEffect(id: "image", in: namespace)
                                 )
-                    .background(Image("Rectangle 8")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill )
-                                    .matchedGeometryEffect(id: "background", in: namespace)
+                    .background(Rectangle()
+                                    .fill(.mint)
                                 )
                     .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
                             .matchedGeometryEffect(id: "mask", in: namespace)

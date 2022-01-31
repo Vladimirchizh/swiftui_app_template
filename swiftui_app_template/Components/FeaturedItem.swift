@@ -43,13 +43,7 @@ struct FeaturedItem: View {
         // strokeStyle()
         .padding(.horizontal, 20)
         
-        .overlay(
-            Image(course.image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height: 230)
-                .offset(x:32, y: -90)
-        )
+        
     }
 
 }
