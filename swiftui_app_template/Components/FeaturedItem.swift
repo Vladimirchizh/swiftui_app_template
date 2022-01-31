@@ -13,7 +13,7 @@ struct FeaturedItem: View {
         VStack(alignment: .leading, spacing: 8.0){
             Spacer()
             Image(systemName: course.logo)
-                .resizable(resizingMode: .stretch)
+                //.resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 26.0, height: 26.0)
                 .cornerRadius(10)
@@ -40,7 +40,6 @@ struct FeaturedItem: View {
         .padding(.vertical, 20)
         .frame(height: 350.0)
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 30, style: .continuous))
-        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
         // strokeStyle()
         .padding(.horizontal, 20)
         

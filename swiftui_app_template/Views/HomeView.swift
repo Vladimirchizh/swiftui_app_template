@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @State var hasScrolled = false
     @State private var animate = false
     var body: some View {
        ScrollView{
            TabView{
                ForEach(courses){ item in
-                   FeaturedItem(course: item)
+                   GeometryReader{ proxy in
+                       FeaturedItem(course: item)
+                           .padding(.vertical, 40)
+                           .rotation3DEffect(.degrees(proxy.frame(in: .global).minX / -10), axis:(x:0, y:1, z: 0))
+                           .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
+                           
+                       
+                   }
                    
                }
            }
@@ -63,12 +70,25 @@ struct HomeView: View {
        
            )
        }
-       //.overlay(
-         //   Text("Featured")
-           //     .font(.largeTitle.weight(.semibold))
-             //   .frame(maxWidth: .infinity,alignment: .leading)
-               // .padding(.leading, 20)
-       //)
+       /*.coordinateSpace(name: "scroll")
+       .onPreferenceChange(perform: {value in
+           withAnimation(.easeInOut){
+               if value < 0 {
+                   hasScrolled = true
+               }else{
+                   hasScrolled = false
+               }
+               
+           }
+       }
+       )
+       .safeAreaInset(edge: .top, content: {Color.clear.frame(height: 70)})
+       .overlay(
+            Text("Featured")
+                .font(.largeTitle.weight(.semibold))
+                .frame(maxWidth: .infinity,alignment: .leading)
+                .padding(.leading, 20)
+       )*/
         
     }
 }
