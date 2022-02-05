@@ -30,7 +30,7 @@ struct TabBar: View {
             HStack {
                 ForEach(tabItems){item in
                     Button{
-                        withAnimation(.spring(response: 0.3, dampingFraction: 0.17)){
+                        withAnimation(.spring(response: 0.3, dampingFraction: 0.7)){
                             selectedTab = item.tab
                             color = item.color
                         }

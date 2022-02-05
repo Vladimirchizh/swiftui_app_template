@@ -54,9 +54,8 @@ struct HomeView: View {
                                
                            }
                    }
-                   
+
                }
-            TabBar()
                
             }
             if show{
