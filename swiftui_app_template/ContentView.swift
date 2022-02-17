@@ -7,124 +7,90 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    /// List of users
+    @State var users: [Card] = cards
     
+    /// Return the CardViews width for the given offset in the array
+    /// - Parameters:
+    ///   - geometry: The geometry proxy of the parent
+    ///   - id: The ID of the current user
+    private func getCardWidth(_ geometry: GeometryProxy, id: Int) -> CGFloat {
+        let offset: CGFloat = CGFloat(users.count - 1 - id) * 10
+        return geometry.size.width - offset
+    }
     
-    @Namespace var namespace
-    @State var show = false
-    @State private var animate = false
+    /// Return the CardViews frame offset for the given offset in the array
+    /// - Parameters:
+    ///   - geometry: The geometry proxy of the parent
+    ///   - id: The ID of the current user
+    private func getCardOffset(_ geometry: GeometryProxy, id: Int) -> CGFloat {
+        return  CGFloat(users.count - 1 - id) * 10
+    }
     
+    private var maxID: Int {
+        return self.users.map { $0.id }.max() ?? 0
+    }
     
     var body: some View {
-        
-        ZStack {
-                if !show { 
-                    VStack{
-                        Spacer()
-                        VStack(alignment:.leading, spacing: 12) {
-                            Text("StyleGAN")
-                                .font(.largeTitle)
-                                .matchedGeometryEffect(id: "title", in: namespace)
-                                .frame(maxWidth: .infinity,
-                                   alignment: .leading)
-                            Text("Image generation with StyleGAN and CLIP".uppercased())
-                                .font(.footnote.weight(.semibold))
-                                .matchedGeometryEffect(id: "subtitle", in: namespace)
-                        }
-                        .padding(20)
-                        .background(
-                            Rectangle()
-                                .fill(.ultraThinMaterial)
-                                .mask(RoundedRectangle(cornerRadius: 30,style: .continuous))
-                                .blur(radius: 30)
-                                .matchedGeometryEffect(id: "blur", in: namespace)
-                        )
-                        
-                    }
-                    .foregroundColor(.white)
-                    .background(Image("Group 15")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit )
-                                    .matchedGeometryEffect(id: "image", in: namespace)
-                                )
-                    .background(Rectangle()
-                                    .fill(.mint)
-                                )
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
-                            .matchedGeometryEffect(id: "mask", in: namespace)
-                            )
-                    .frame(height:300)
-                    .padding(20)
-                } else {
-                    
-                    ScrollView {
-                        VStack{
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(height:500)
-                        .foregroundColor(.black)
-                        .background(Image("Group 15")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill )
-                                        .matchedGeometryEffect(id: "image", in: namespace)
-                                    )
-                        .background(Image("Rectangle 8")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill )
-                                        .matchedGeometryEffect(id: "background", in: namespace)
-                                    )
-                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
-                                .matchedGeometryEffect(id: "mask", in: namespace)
-                        )
-                        .overlay(
-                            VStack(alignment:.leading, spacing: 12){
-                                Text("Image generation with StyleGAN and CLIP".uppercased())
-                                    .font(.footnote.weight(.semibold))
-                                    .matchedGeometryEffect(id: "subtitle", in: namespace)
-                                Text("StyleGAN")
-                                    .font(.largeTitle.weight(.black))
-                                    .matchedGeometryEffect(id: "title", in: namespace)
-                                    .frame(maxWidth: .infinity,
-                                           alignment: .leading)
-                                Divider()
-                                HStack{
-                                    Image("Avatar Default")
-                                        .resizable()
-                                        .frame(width: 26, height: 26)
-                                        .cornerRadius(10)
-                                    
-                                    
+        VStack {
+            GeometryReader { geometry in
+                LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)), Color.init(#colorLiteral(red: 1, green: 0.9882352941, blue: 0.862745098, alpha: 1))]), startPoint: .bottom, endPoint: .top)
+                    .frame(width: geometry.size.width * 1.5, height: geometry.size.height)
+                    .background(Color.blue)
+                    .clipShape(Circle())
+                    .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
+                
+                VStack(spacing: 24) {
+                    DateView()
+                    Spacer()
+                    ZStack {
+                        ForEach(self.users, id: \.self) { user in
+                            Group {
+                                // Range Operator
+                                if (self.maxID - 3)...self.maxID ~= user.id {
+                                    CardView(user: user, onRemove: { removedUser in
+                                        // Remove that user from our array
+                                        self.users.removeAll { $0.id == removedUser.id }
+                                    })
+                                        .animation(.spring())
+                                        .frame(width: self.getCardWidth(geometry, id: user.id), height: 400)
+                                        .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))
                                 }
-                                
                             }
-                                .padding(20)
-                                .background(
-                                        Rectangle()
-                                            .fill(.ultraThinMaterial)
-                                            .mask(RoundedRectangle(cornerRadius: 30,style: .continuous))
-                                            .matchedGeometryEffect(id: "blur", in: namespace)
-                                    )
-                                .offset(y:250)
-                                .padding(20)
-                            
-                        )
-                        
+                        }
                     }
-                }
-            
-            }.onTapGesture {
-                withAnimation{
-                    show.toggle()
-                    
+                    Spacer()
                 }
             }
+        }.padding()
+    }
+}
+
+struct DateView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Friday, 10th January")
+                        .font(.title)
+                        .bold()
+                    Text("Today")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+                Spacer()
+            }.padding()
+        }
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 5)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .previewDevice("iPhone 12")
     }
 }
