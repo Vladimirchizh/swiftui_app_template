@@ -19,6 +19,9 @@
 		7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419E27A7C9FC004D4D21 /* CourseView.swift */; };
 		7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A41A027A7F435004D4D21 /* LavaItem.swift */; };
 		7DB43FB727A948F200F2D5EE /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB43FB627A948F200F2D5EE /* Tab.swift */; };
+		7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */; };
+		7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */; };
+		7DBDBDCD27C00022006C9E09 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */; };
 		7DDFEC5027AAB049005460A2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFEC4F27AAB049005460A2 /* Card.swift */; };
 		7DDFEC5227AABE72005460A2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFEC5127AABE72005460A2 /* CardView.swift */; };
 		7DEF700E27A702050001D414 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700D27A702050001D414 /* TabBar.swift */; };
@@ -61,6 +64,9 @@
 		7D9A419E27A7C9FC004D4D21 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		7D9A41A027A7F435004D4D21 /* LavaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaItem.swift; sourceTree = "<group>"; };
 		7DB43FB627A948F200F2D5EE /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCard.swift; sourceTree = "<group>"; };
+		7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		7DDFEC4F27AAB049005460A2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7DDFEC5127AABE72005460A2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7DEF700D27A702050001D414 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 				7D186A2627A1F66F008C0B12 /* HomeView.swift */,
 				7D9A419E27A7C9FC004D4D21 /* CourseView.swift */,
 				7DDFEC5127AABE72005460A2 /* CardView.swift */,
+				7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */,
+				7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 			children = (
 				7DB43FB627A948F200F2D5EE /* Tab.swift */,
 				7DDFEC4F27AAB049005460A2 /* Card.swift */,
+				7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,11 +330,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DBDBDCD27C00022006C9E09 /* OnboardingCardView.swift in Sources */,
+				7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */,
 				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,
 				7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */,
 				7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */,
 				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
+				7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */,
 				7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */,
 				18C708E4276777350023CC15 /* ContentView.swift in Sources */,
 				7DDFEC5227AABE72005460A2 /* CardView.swift in Sources */,

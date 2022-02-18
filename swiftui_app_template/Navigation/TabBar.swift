@@ -21,7 +21,7 @@ struct TabBar: View {
                 case .notifications:
                     LavaItem()
                 case .library:
-                    LavaItem()
+                    ContentView()
                 }
                 
             }
