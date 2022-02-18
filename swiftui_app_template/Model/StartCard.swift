@@ -16,8 +16,8 @@ struct StartCard: Identifiable{
 }
 
 var startCards = [
-    StartCard(header: "Learn english with H&S", preheader: "Учите английский вместе с нами теперь еще и с помощью приложени HOP&SCOTCH app.", toptext: "your personal learning companion"),
-    StartCard(header: "Your homework - just in time", preheader: "Доступ к расписанию, домашним заданиям и интерактивным карточкам всегда вместе с вами.", toptext: "study on the go")
+    StartCard(header: "Learn \nEnglish \nwith H&S", preheader: "Учите английский вместе с нами теперь еще и с помощью приложени HOP&SCOTCH app.", toptext: "your personal learning companion"),
+    StartCard(header: "Your \nhomework - \njust in time", preheader: "Доступ к расписанию, домашним заданиям и интерактивным карточкам всегда вместе с вами.", toptext: "study on the go")
 ]
 
 

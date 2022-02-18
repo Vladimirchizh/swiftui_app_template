@@ -16,18 +16,25 @@ struct OnboardingCardView: View {
             Text(card.toptext.uppercased())
                 .font(.footnote)
                 .fontWeight(.semibold)
+                .foregroundColor(Color.white)
+            
             Text(card.header)
                 .font(.largeTitle)
                 .bold()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundColor(Color.white)
+                
             Text(card.preheader)
                 .font(.subheadline)
-            
-            
+                .foregroundColor(Color.white)
         }
+        // .foregroundColor(.white)
         .padding(30)
-        .background(LavaItem())
+        //.background(LavaItem())
+        .background(.ultraThinMaterial)
         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         .padding(20)
+        .shadow(radius: 10)
         
     }
 }

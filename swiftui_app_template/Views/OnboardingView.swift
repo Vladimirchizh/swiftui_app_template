@@ -10,14 +10,19 @@ import SwiftUI
 struct Onboarding:View{
     //@State var startCards: [StartCard] = startCards
     var body: some View{
+        
         ZStack{
-            TabView {
-                ForEach(startCards){card in
-                    OnboardingCardView(card: card)
+            LavaItem()
+                .padding(-240)
+            VStack{
+                TabView {
+                    ForEach(startCards){card in
+                        OnboardingCardView(card: card)
+                    }
                 }
+                    .tabViewStyle(PageTabViewStyle())
+                ButtonItem(text: "Come in")
             }
-            .tabViewStyle(PageTabViewStyle())
-            
         }
     }
     
