@@ -33,6 +33,7 @@ struct ContentView: View {
         return self.users.map { $0.id }.max() ?? 0
     }
     
+    @State private var listAll = false
     var body: some View {
         VStack {
             GeometryReader { geometry in
@@ -41,27 +42,70 @@ struct ContentView: View {
                     .background(Color.blue)
                     .clipShape(Circle())
                     .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
+                    .padding(-80)
                 
                 VStack(spacing: 24) {
                     DateView()
                     Spacer()
-                    ZStack {
-                        ForEach(self.users, id: \.self) { user in
-                            Group {
-                                // Range Operator
-                                if (self.maxID - 3)...self.maxID ~= user.id {
-                                    CardView(user: user, onRemove: { removedUser in
-                                        // Remove that user from our array
-                                        self.users.removeAll { $0.id == removedUser.id }
-                                    })
-                                        .animation(.spring())
-                                        .frame(width: self.getCardWidth(geometry, id: user.id), height: 400)
-                                        .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))
+                    if !listAll{
+                        ZStack {
+                            ForEach(self.users, id: \.self) { user in
+                                Group {
+                                    // Range Operator
+                                    if (self.maxID - 3)...self.maxID ~= user.id {
+                                        CardView(user: user, onRemove: { removedUser in
+                                            // Remove that user from our array
+                                            self.users.removeAll { $0.id == removedUser.id }
+                                        })
+                                            .animation(.spring())
+                                            .frame(width: self.getCardWidth(geometry, id: user.id), height: 400)
+                                            .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))
+                                        }
+                                    }
                                 }
                             }
+                        Spacer()
+                        Button("Показать все слова") {
+                            withAnimation{
+                                listAll.toggle()
+                                
+                            }
                         }
+                        .foregroundColor(Color.black)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(30)
+                        .shadow(radius: 10)
+                        Spacer()
+                        
+                        }
+                    
+                    if listAll{
+                        Spacer()
+                        //Text("Список слов")
+                        List(cards){user in
+                            HStack{
+                                Text(user.text)
+                                Spacer()
+                                Text(user.translate)}
+                        }
+                        .background(Color.clear)
+                        .cornerRadius(20)
+                        Button("Показать карточки") {
+                            withAnimation{
+                                listAll.toggle()
+                                
+                            }
+                        }
+                        .foregroundColor(Color.black)
+                        .padding()
+                        .padding(.horizontal)
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(30)
+                        .shadow(radius: 10)
+                        Spacer()
                     }
-                    Spacer()
                 }
             }
         }.padding()
@@ -73,7 +117,7 @@ struct DateView: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Friday, 10th January")
+                    Text("Tuesday, 22nd February")
                         .font(.title)
                         .bold()
                     Text("Today")

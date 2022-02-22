@@ -57,28 +57,26 @@ struct CardView: View {
                             .padding(10)
                     }
                 }
-                
+                Spacer()
                 HStack {
                     self.flipped ?
-                    VStack {
+                    VStack (alignment: .leading, spacing: 6){
                         Text(self.user.translate.uppercased())
                             .font(.title)
                             .fontWeight(.semibold)
                             
-                    } :
+                    }.rotation3DEffect(Angle(degrees: 180), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0))):
                     VStack(alignment: .leading, spacing: 6) {
-                        
                         Text(self.user.text.uppercased())
                             .font(.title)
                             .fontWeight(.semibold)
-                        
-                        // .padding(.horizontal,30)
-                    }
+                            
+                    }.rotation3DEffect(Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
                     Spacer()
                     
                 }
                 .padding(.horizontal)
-                .padding(60)
+                Spacer()
             }
             .padding(.bottom)
             .background(.white)
@@ -123,7 +121,7 @@ struct CardView: View {
 // 7
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(user: Card(id: 1, text: "Mark", translate: "Bennett"),
+        CardView(user: Card(id: 1, text: "Memorize", translate: "Bennett"),
                  onRemove: { _ in
                     // do nothing
             })

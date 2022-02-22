@@ -8,21 +8,37 @@
 import SwiftUI
 
 struct Onboarding:View{
+    @State private var nextView = false
     //@State var startCards: [StartCard] = startCards
     var body: some View{
-        
-        ZStack{
-            LavaItem()
-                .padding(-240)
-            VStack{
-                TabView {
-                    ForEach(startCards){card in
-                        OnboardingCardView(card: card)
+        if !nextView {
+                ZStack {
+                    LavaItem()
+                            .padding(-240)
+                    VStack {
+                        TabView {
+                            ForEach(startCards) { card in
+                                OnboardingCardView(card: card)
+                            }
+                        }
+                                .tabViewStyle(PageTabViewStyle())
+                        Button("Войти") {
+                            withAnimation {
+                                nextView.toggle()
+
+                            }
+                        }
+                                .foregroundColor(Color.white)
+                                .padding()
+                                .padding(.horizontal)
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(30)
+                                .shadow(radius: 10)
                     }
                 }
-                    .tabViewStyle(PageTabViewStyle())
-                ButtonItem(text: "Come in")
             }
+        if nextView{
+            TabBar()
         }
     }
     
