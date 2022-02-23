@@ -9,7 +9,6 @@ import SwiftUI
 
 struct Onboarding:View{
     @State private var nextView = false
-    //@State var startCards: [StartCard] = startCards
     var body: some View{
         if !nextView {
                 ZStack {
@@ -18,7 +17,7 @@ struct Onboarding:View{
                     VStack {
                         TabView {
                             ForEach(startCards) { card in
-                                OnboardingCardView(card: card)
+                                OnboardingCardItem(card: card)
                             }
                         }
                                 .tabViewStyle(PageTabViewStyle())

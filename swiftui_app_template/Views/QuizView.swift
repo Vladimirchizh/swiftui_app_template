@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  QuizView.swift
 //  swiftui_app_template
 //
 //  Created by Apple on 13.12.2021.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct QuizView: View {
     /// List of users
     @State var users: [Card] = cards
     
@@ -46,7 +46,7 @@ struct ContentView: View {
                 
                 VStack(spacing: 24) {
                     DateView()
-                    Spacer()
+                    Spacer().frame(height: 5)
                     if !listAll{
                         ZStack {
                             ForEach(self.users, id: \.self) { user in
@@ -64,7 +64,7 @@ struct ContentView: View {
                                     }
                                 }
                             }
-                        Spacer()
+                        Spacer() //.frame(height: 59)
                         Button("Показать все слова") {
                             withAnimation{
                                 listAll.toggle()
@@ -76,13 +76,13 @@ struct ContentView: View {
                         .padding(.horizontal)
                         .background(.ultraThinMaterial)
                         .cornerRadius(30)
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         Spacer()
                         
                         }
                     
                     if listAll{
-                        Spacer()
+                        // Spacer().frame(height: 5)
                         //Text("Список слов")
                         List(cards){user in
                             HStack{
@@ -90,8 +90,9 @@ struct ContentView: View {
                                 Spacer()
                                 Text(user.translate)}
                         }
-                        .background(Color.clear)
                         .cornerRadius(20)
+                        .frame(height: 400)
+                        Spacer()
                         Button("Показать карточки") {
                             withAnimation{
                                 listAll.toggle()
@@ -103,7 +104,7 @@ struct ContentView: View {
                         .padding(.horizontal)
                         .background(.ultraThinMaterial)
                         .cornerRadius(30)
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         Spacer()
                     }
                 }
@@ -133,8 +134,8 @@ struct DateView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        QuizView()
     }
 }

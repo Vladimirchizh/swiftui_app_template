@@ -18,10 +18,19 @@ struct TabBar: View {
                     HomeView()
                 case .explore:
                     LavaItem()
-                case .notifications:
-                    LavaItem()
-                case .library:
-                    ContentView()
+                case .cards:
+                    QuizView()
+                case .account:
+                    AccountView(
+                            user: User(
+                                    picture: "person.crop.circle",
+                                    firstName: "Vladimir",
+                                    lastName: "Chizhevskiy",
+                                    phone: "+79281515366",
+                                    email: "vdchizhevskiy@gmail.com",
+                                    level: "Advanced II"
+                            )
+                    )
                 }
                 
             }
@@ -58,9 +67,9 @@ struct TabBar: View {
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 34, style: .continuous))
             .background(
                 HStack {
-                    if selectedTab == .library{ Spacer() }
+                    if selectedTab == .account{ Spacer() }
                     if selectedTab == .explore{ Spacer() }
-                    if selectedTab == .notifications{
+                    if selectedTab == .cards{
                         Spacer()
                         Spacer()
                     }
@@ -70,16 +79,16 @@ struct TabBar: View {
                         Spacer()
                         Spacer()
                     }
-                    if selectedTab == .notifications { Spacer() }
+                    if selectedTab == .cards { Spacer() }
                 }
                 .padding(.horizontal,8)
                 
             )
             .overlay(
                 HStack{
-                    if selectedTab == .library { Spacer() }
+                    if selectedTab == .account { Spacer() }
                     if selectedTab == .explore { Spacer() }
-                    if selectedTab == .notifications {
+                    if selectedTab == .cards {
                         Spacer()
                         Spacer()
                     }
@@ -94,7 +103,7 @@ struct TabBar: View {
                         Spacer()
                         Spacer()
                     }
-                    if selectedTab == .notifications { Spacer() }
+                    if selectedTab == .cards { Spacer() }
                 }
                 .padding(.horizontal, 8)
                 

@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		18C708E2276777350023CC15 /* swiftui_app_templateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C708E1276777350023CC15 /* swiftui_app_templateApp.swift */; };
-		18C708E4276777350023CC15 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C708E3276777350023CC15 /* ContentView.swift */; };
 		18C708E6276777380023CC15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C708E5276777380023CC15 /* Assets.xcassets */; };
 		18C708E9276777380023CC15 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C708E8276777380023CC15 /* Preview Assets.xcassets */; };
 		18C708F4276777380023CC15 /* swiftui_app_templateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C708F3276777380023CC15 /* swiftui_app_templateTests.swift */; };
 		18C708FF276777380023CC15 /* swiftui_app_templateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C708FE276777380023CC15 /* swiftui_app_templateUITests.swift */; };
+		1C775175F084D81E3F69508F /* OnboardingCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */; };
+		1C7751E88D1A6A4D0F66011E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775ED4F9ABEA9BD1416848 /* User.swift */; };
+		1C7757411051EC2712DB994C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775B318043546A894B7FB9 /* QuizView.swift */; };
 		7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2627A1F66F008C0B12 /* HomeView.swift */; };
 		7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */; };
 		7D91932927C00CA2007A596C /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91932827C00CA2007A596C /* ButtonItem.swift */; };
 		7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419C27A7C819004D4D21 /* CourseItem.swift */; };
 		7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419E27A7C9FC004D4D21 /* CourseView.swift */; };
 		7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A41A027A7F435004D4D21 /* LavaItem.swift */; };
+		7D9FE21727C6574500B10AE3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9FE21627C6574500B10AE3 /* AccountView.swift */; };
 		7DB43FB727A948F200F2D5EE /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB43FB627A948F200F2D5EE /* Tab.swift */; };
 		7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */; };
 		7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */; };
-		7DBDBDCD27C00022006C9E09 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */; };
 		7DDFEC5027AAB049005460A2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFEC4F27AAB049005460A2 /* Card.swift */; };
 		7DDFEC5227AABE72005460A2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDFEC5127AABE72005460A2 /* CardView.swift */; };
 		7DEF700E27A702050001D414 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF700D27A702050001D414 /* TabBar.swift */; };
@@ -49,7 +51,6 @@
 /* Begin PBXFileReference section */
 		18C708DE276777350023CC15 /* swiftui_app_template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftui_app_template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C708E1276777350023CC15 /* swiftui_app_templateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_app_templateApp.swift; sourceTree = "<group>"; };
-		18C708E3276777350023CC15 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		18C708E5276777380023CC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C708E8276777380023CC15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18C708EA276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,16 +60,19 @@
 		18C708FA276777380023CC15 /* swiftui_app_templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftui_app_templateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C708FE276777380023CC15 /* swiftui_app_templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_app_templateUITests.swift; sourceTree = "<group>"; };
 		18C70900276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCardItem.swift; sourceTree = "<group>"; };
+		1C775B318043546A894B7FB9 /* QuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		1C775ED4F9ABEA9BD1416848 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7D186A2627A1F66F008C0B12 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		7D91932827C00CA2007A596C /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		7D9A419C27A7C819004D4D21 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		7D9A419E27A7C9FC004D4D21 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		7D9A41A027A7F435004D4D21 /* LavaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaItem.swift; sourceTree = "<group>"; };
+		7D9FE21627C6574500B10AE3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		7DB43FB627A948F200F2D5EE /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCard.swift; sourceTree = "<group>"; };
-		7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 		7DDFEC4F27AAB049005460A2 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		7DDFEC5127AABE72005460A2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		7DEF700D27A702050001D414 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -128,7 +132,6 @@
 				7D186A2427A1EB97008C0B12 /* Navigation */,
 				7D186A2327A1EB77008C0B12 /* Views */,
 				18C708E1276777350023CC15 /* swiftui_app_templateApp.swift */,
-				18C708E3276777350023CC15 /* ContentView.swift */,
 				18C708E5276777380023CC15 /* Assets.xcassets */,
 				18C708EA276777380023CC15 /* Info.plist */,
 				18C708E7276777380023CC15 /* Preview Content */,
@@ -170,7 +173,8 @@
 				7D9A419E27A7C9FC004D4D21 /* CourseView.swift */,
 				7DDFEC5127AABE72005460A2 /* CardView.swift */,
 				7DB923B727BFEFAA00619FD8 /* OnboardingView.swift */,
-				7DBDBDCC27C00022006C9E09 /* OnboardingCardView.swift */,
+				7D9FE21627C6574500B10AE3 /* AccountView.swift */,
+				1C775B318043546A894B7FB9 /* QuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +194,7 @@
 				7D9A419C27A7C819004D4D21 /* CourseItem.swift */,
 				7D9A41A027A7F435004D4D21 /* LavaItem.swift */,
 				7D91932827C00CA2007A596C /* ButtonItem.swift */,
+				1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				7DB43FB627A948F200F2D5EE /* Tab.swift */,
 				7DDFEC4F27AAB049005460A2 /* Card.swift */,
 				7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */,
+				1C775ED4F9ABEA9BD1416848 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -333,9 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DBDBDCD27C00022006C9E09 /* OnboardingCardView.swift in Sources */,
 				7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */,
 				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
+				7D9FE21727C6574500B10AE3 /* AccountView.swift in Sources */,
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,
 				7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */,
 				7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */,
@@ -343,12 +349,14 @@
 				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
 				7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */,
 				7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */,
-				18C708E4276777350023CC15 /* ContentView.swift in Sources */,
 				7DDFEC5227AABE72005460A2 /* CardView.swift in Sources */,
 				7DDFEC5027AAB049005460A2 /* Card.swift in Sources */,
 				7DB43FB727A948F200F2D5EE /* Tab.swift in Sources */,
 				7DEF700E27A702050001D414 /* TabBar.swift in Sources */,
 				18C708E2276777350023CC15 /* swiftui_app_templateApp.swift in Sources */,
+				1C7751E88D1A6A4D0F66011E /* User.swift in Sources */,
+				1C7757411051EC2712DB994C /* QuizView.swift in Sources */,
+				1C775175F084D81E3F69508F /* OnboardingCardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

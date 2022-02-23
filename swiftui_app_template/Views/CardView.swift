@@ -15,8 +15,7 @@ struct CardView: View {
     private var user: Card
     private var onRemove: (_ user: Card) -> Void
     
-    private var thresholdPercentage: CGFloat = 0.5 // when the user has draged 50% the width of the screen in either direction
-    
+    private var thresholdPercentage: CGFloat = 0.5
     private enum LikeDislike: Int {
         case like, dislike, none
     }
@@ -82,7 +81,7 @@ struct CardView: View {
             .background(.white)
             .cornerRadius(10)
             .shadow(radius: 5)
-            .foregroundColor(self.flipped ? .teal : .black) // change the card color when flipped
+            .foregroundColor(self.flipped ? .teal : .black)
             .padding()
             .rotation3DEffect(self.flipped ? Angle(degrees: 180): Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
             .animation(.default)
