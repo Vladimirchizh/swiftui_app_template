@@ -16,8 +16,8 @@ struct TabBar: View {
                 switch selectedTab {
                 case .home:
                     HomeView()
-                case .explore:
-                    LavaItem()
+                case .calendar:
+                    ContentView()
                 case .cards:
                     QuizView()
                 case .account:
@@ -68,14 +68,14 @@ struct TabBar: View {
             .background(
                 HStack {
                     if selectedTab == .account{ Spacer() }
-                    if selectedTab == .explore{ Spacer() }
+                    if selectedTab == .calendar{ Spacer() }
                     if selectedTab == .cards{
                         Spacer()
                         Spacer()
                     }
                     Circle().fill(color).frame(width: 88)
                     if selectedTab == .home { Spacer() }
-                    if selectedTab == .explore {
+                    if selectedTab == .calendar {
                         Spacer()
                         Spacer()
                     }
@@ -87,7 +87,7 @@ struct TabBar: View {
             .overlay(
                 HStack{
                     if selectedTab == .account { Spacer() }
-                    if selectedTab == .explore { Spacer() }
+                    if selectedTab == .calendar { Spacer() }
                     if selectedTab == .cards {
                         Spacer()
                         Spacer()
@@ -99,7 +99,7 @@ struct TabBar: View {
                         .frame(width:88)
                         .frame(maxHeight: .infinity, alignment: .top)
                     if selectedTab == .home { Spacer() }
-                    if selectedTab == .explore {
+                    if selectedTab == .calendar {
                         Spacer()
                         Spacer()
                     }
