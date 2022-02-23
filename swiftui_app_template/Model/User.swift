@@ -2,7 +2,7 @@
 // Created by Владимир Чижевский on 23.02.2022.
 //
 
-import Foundation
+import SwiftUI
 
 
 

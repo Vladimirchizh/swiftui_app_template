@@ -16,12 +16,12 @@ struct AccountView: View {
         VStack{
             Spacer()
             VStack{
-                Image(systemName: user.picture)
+                Image(user.picture)
                         .resizable()
                         .frame(width: 120, height: 120)
                         .clipShape(Circle())
                         .padding(.horizontal, 110)
-                Text("\(user.firstName) \(user.lastName)")
+                Text("\(user.firstName)  \(user.lastName)")
                         .font(.title)
                         .bold()
             }
@@ -30,7 +30,7 @@ struct AccountView: View {
             VStack(alignment: .leading, spacing: 13){
                 HStack{
                     Image(systemName: "phone")
-                    Text("Телефон")
+                    Text("Телефон:")
                     Text(user.phone)
                 }
                 HStack{
@@ -39,11 +39,13 @@ struct AccountView: View {
                 }
                 HStack{
                     Image(systemName: "book.closed")
+                    Text("Уровень:")
                     Text(user.level)
                 }
+                
             }
             Spacer()
-            Button("Update profile"){
+            Button("Редактировать"){
                 print("button tapped")
             }
 
@@ -70,13 +72,13 @@ struct AccountView: View {
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
         AccountView(user: User(
-                picture: "person.crop.circle",
+                picture: "VladimirChizhevskiy",
                 firstName: "Vladimir",
                 lastName: "Chizhevskiy",
                 phone: "+79281515366",
                 email: "vdchizhevskiy@gmail.com",
                 level: "Advanced II"
-        )
+            )
         )
     }
 }

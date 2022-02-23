@@ -23,7 +23,7 @@ struct TabBar: View {
                 case .account:
                     AccountView(
                             user: User(
-                                    picture: "person.crop.circle",
+                                    picture: "VladimirChizhevskiy",
                                     firstName: "Vladimir",
                                     lastName: "Chizhevskiy",
                                     phone: "+79281515366",

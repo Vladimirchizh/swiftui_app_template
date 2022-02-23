@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var animate = false
     var body: some View {
         ZStack {
+            
             ScrollView {
                 TabView {
                     ForEach(courses) { course in
@@ -39,12 +40,16 @@ struct HomeView: View {
                     }
                 }
                         .tabViewStyle(.page(indexDisplayMode: .never))
-                        .frame(height: 430)
+                        .frame(height: 410)
                         .background(
-
                                 LavaItem()
                         )
-
+                Text("What's new?")
+                        .font(.title)
+                        .frame(maxWidth: .infinity,
+                           alignment: .leading)
+                        .padding(.horizontal, 30)
+                
                 if !show {
                     CourseItem(show: $show, namespace: namespace)
                             .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
