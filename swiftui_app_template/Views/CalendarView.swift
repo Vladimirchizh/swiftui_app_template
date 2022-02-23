@@ -21,6 +21,7 @@ struct ContentView: View {
                         .hidden()
                         .padding(8)
                         .background(1 != 1 ? Color.red : Color.teal) // Make your logic
+                        .blur(radius: 10)
                         .clipShape(Rectangle())
                         .cornerRadius(10)
                         .padding(4)
@@ -168,23 +169,23 @@ struct MonthView<DateView>: View where DateView: View {
                     Button(action: {
                         self.changeDateBy(-1)
                     }) {
-                    Image(systemName: "chevron.left.square") //
+                    Image(systemName: "chevron.left.circle") //
                         .resizable()
                     }
                     Button(action: {
                         self.month = Date()
                     }) {
-                    Image(systemName: "dot.square")
+                    Image(systemName: "arrow.clockwise.circle")
                         .resizable()
                     }
                     Button(action: {
                         self.changeDateBy(1)
                     }) {
-                    Image(systemName: "chevron.right.square") //"chevron.right.square"
+                    Image(systemName: "chevron.right.circle")
                         .resizable()
                     }
                 }
-                .foregroundColor(Color.blue)
+                .foregroundColor(Color.black)
                 .frame(width: 25, height: 25)
                 
             }
