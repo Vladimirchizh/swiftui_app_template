@@ -19,6 +19,7 @@
 		7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */; };
 		7D6B1A4527C6890E00FF5CB7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */; };
 		7D91932927C00CA2007A596C /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91932827C00CA2007A596C /* ButtonItem.swift */; };
+		7D92DBAE27C8FAFE00092ED4 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92DBAD27C8FAFE00092ED4 /* Homework.swift */; };
 		7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419C27A7C819004D4D21 /* CourseItem.swift */; };
 		7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419E27A7C9FC004D4D21 /* CourseView.swift */; };
 		7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A41A027A7F435004D4D21 /* LavaItem.swift */; };
@@ -68,6 +69,7 @@
 		7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7D91932827C00CA2007A596C /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
+		7D92DBAD27C8FAFE00092ED4 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 		7D9A419C27A7C819004D4D21 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		7D9A419E27A7C9FC004D4D21 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		7D9A41A027A7F435004D4D21 /* LavaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaItem.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				7DDFEC4F27AAB049005460A2 /* Card.swift */,
 				7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */,
 				1C775ED4F9ABEA9BD1416848 /* User.swift */,
+				7D92DBAD27C8FAFE00092ED4 /* Homework.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */,
+				7D92DBAE27C8FAFE00092ED4 /* Homework.swift in Sources */,
 				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
 				7D9FE21727C6574500B10AE3 /* AccountView.swift in Sources */,
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,

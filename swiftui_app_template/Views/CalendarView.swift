@@ -240,12 +240,53 @@ struct CalendarView<DateView>: View where DateView: View {
             matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
         )
     }
-
+    
+    
     var body: some View {
-   
+        
             ForEach(months, id: \.self) { month in
                 MonthView(month: month, content: self.content)
             }
-
+        Spacer().frame( height: 25)
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Задание на:")
+                        Text(Date(), style: .date)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    VStack{
+                        Text("Повторить все случаи использования Mixed conditionals")
+                    }
+                }.padding()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Задание на:")
+                        Text(Date.now.addingTimeInterval(7*86400), style: .date)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    VStack{
+                        Text("Подготовиться к тесту ")
+                    }
+                }.padding()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Задание на:")
+                        Text(Date.now.addingTimeInterval(14*86400), style: .date)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer().frame(width:67)
+                    VStack{
+                        Text("Повторить новую лексику, написать эссе")
+                    }
+                }.padding()
+            }
+            .background(Color.white)
+            .cornerRadius(10)
     }
 }

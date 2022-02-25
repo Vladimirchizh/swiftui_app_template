@@ -45,7 +45,7 @@ struct QuizView: View {
                     .padding(-80)
                 
                 VStack(spacing: 24) {
-                    DateView()
+                    DateLongView()
                     Spacer().frame(height: 5)
                     if !listAll{
                         ZStack {
@@ -113,12 +113,13 @@ struct QuizView: View {
     }
 }
 
-struct DateView: View {
+struct DateLongView: View {
     var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Tuesday, 22nd February")
+                    
+                    Text(Date(), style: .date)
                         .font(.title)
                         .bold()
                     Text("Today")

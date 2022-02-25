@@ -44,7 +44,7 @@ struct HomeView: View {
                         .background(
                                 LavaItem()
                         )
-                Text("What's new?")
+                Text("Что нового?")
                         .font(.title)
                         .frame(maxWidth: .infinity,
                            alignment: .leading)
