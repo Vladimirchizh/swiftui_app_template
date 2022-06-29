@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import RiveRuntime
 
 struct TabBar: View {
     @State var selectedTab: Tab = .home
     @State var color: Color = .teal
     var body: some View {
+
         ZStack(alignment: .bottom){
             Group{
                 switch selectedTab {
@@ -39,16 +41,22 @@ struct TabBar: View {
             HStack {
                 ForEach(tabItems){item in
                     Button{
+                        try? item.icon.setInput("active", value: true)
+                        DispatchQueue.main.asyncAfter(deadline:.now()+1){
+                            try? item.icon.setInput("active", value: false)
+                        }
                         withAnimation(.spring(response: 0.3, dampingFraction: 0.7)){
                             selectedTab = item.tab
                             color = item.color
                         }
                     } label: {
                         VStack(spacing: 0) {
-                            Image(systemName: item.icon)
+                            item.icon.view()
+                                .frame(width: 44, height: 40)
+                            /* Image(item.icon)
                                 .symbolVariant(.fill)
                                 .font(.body.bold())
-                                .frame(width: 44, height: 29)
+                                .frame(width: 44, height: 29) */
                             Text(item.text)
                                 .font(.caption2)
                                 .lineLimit(1)
