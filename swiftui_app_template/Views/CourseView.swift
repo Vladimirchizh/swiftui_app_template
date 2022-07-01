@@ -32,6 +32,7 @@ struct CourseView: View {
             }
             .frame(maxWidth: .infinity,  maxHeight: .infinity, alignment: .topTrailing)
             .padding(20)
+            .offset(y: 20)
             .ignoresSafeArea()
         }
     }

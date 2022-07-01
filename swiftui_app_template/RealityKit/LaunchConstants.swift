@@ -9,7 +9,7 @@ import UIKit
 
 enum LaunchConstants {
     /// use for the background and also the tile color
-    static let backgroundColor = UIColor(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1))
+    static let backgroundColor = UIColor(#colorLiteral(red: 0, green: 0.6490783095, blue: 0.6566269994, alpha: 1))
     
     static let textDepth = Float(0.008)
     static let textHeight = CGFloat(0.08)

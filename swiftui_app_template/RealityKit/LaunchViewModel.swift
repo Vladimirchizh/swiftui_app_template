@@ -46,22 +46,22 @@ class LaunchViewModel: ObservableObject {
         ),
         LaunchTextRow(
             text: [
-                LaunchText(character: "❖"),
-                LaunchText(character: "H", isPartOfFind: true),
-                LaunchText(character: "O", isPartOfFind: true),
-                LaunchText(character: "P", isPartOfFind: true),
-                LaunchText(character: "&", isPartOfFind: true),
-                LaunchText(character: "❖")
+                LaunchText(character: "L", isPartOfFind: true),
+                LaunchText(character: "i", isPartOfFind: true),
+                LaunchText(character: "n", isPartOfFind: true),
+                LaunchText(character: "g", isPartOfFind: true),
+                LaunchText(character: "u", isPartOfFind: true),
+                LaunchText(character: "a", isPartOfFind: true)
             ]
         ),
         LaunchTextRow(
             text: [
-                LaunchText(character: "S", isPartOfFind: true),
-                LaunchText(character: "C", isPartOfFind: true),
-                LaunchText(character: "O", isPartOfFind: true),
+                LaunchText(character: "✧", isPartOfFind: true),
                 LaunchText(character: "T", isPartOfFind: true),
-                LaunchText(character: "C", isPartOfFind: true),
-                LaunchText(character: "H", isPartOfFind: true)
+                LaunchText(character: "r", isPartOfFind: true),
+                LaunchText(character: "i", isPartOfFind: true),
+                LaunchText(character: "p", isPartOfFind: true),
+                LaunchText(character: "✧", isPartOfFind: true)
             ]
         ),
         LaunchTextRow(
