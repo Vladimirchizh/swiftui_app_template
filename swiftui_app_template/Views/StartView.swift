@@ -25,7 +25,7 @@ struct StartView: View {
 
                     Spacer()
 
-                    Button("Войти") {
+                    Button("Далее") {
                         withAnimation {
                             nextView.toggle()
 
@@ -57,7 +57,7 @@ struct StartView: View {
                 
             }
         if nextView{
-            TabBar()
+            Onboarding()
         }
     }
 }

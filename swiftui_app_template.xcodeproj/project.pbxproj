@@ -15,6 +15,9 @@
 		1C775175F084D81E3F69508F /* OnboardingCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */; };
 		1C7751E88D1A6A4D0F66011E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775ED4F9ABEA9BD1416848 /* User.swift */; };
 		1C7757411051EC2712DB994C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775B318043546A894B7FB9 /* QuizView.swift */; };
+		7D16DEE0287F4D0600C4F4A3 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = 7D16DEDF287F4D0600C4F4A3 /* CardStack */; };
+		7D16DEE2287F4D9400C4F4A3 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16DEE1287F4D9400C4F4A3 /* CardStackView.swift */; };
+		7D16DEE4287F4E6D00C4F4A3 /* NewCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */; };
 		7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2627A1F66F008C0B12 /* HomeView.swift */; };
 		7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */; };
 		7D21F9C5286CE7720077410F /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 7D21F9C4286CE7720077410F /* RiveRuntime */; };
@@ -76,6 +79,8 @@
 		1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCardItem.swift; sourceTree = "<group>"; };
 		1C775B318043546A894B7FB9 /* QuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		1C775ED4F9ABEA9BD1416848 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D16DEE1287F4D9400C4F4A3 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
+		7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCards.swift; sourceTree = "<group>"; };
 		7D186A2627A1F66F008C0B12 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7D186A2827A1F6C3008C0B12 /* FeaturedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItem.swift; sourceTree = "<group>"; };
 		7D21F9C6286CEAE30077410F /* menu_buttons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_buttons.riv; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D21F9C5286CE7720077410F /* RiveRuntime in Frameworks */,
+				7D16DEE0287F4D0600C4F4A3 /* CardStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +209,7 @@
 				7D9FE21627C6574500B10AE3 /* AccountView.swift */,
 				1C775B318043546A894B7FB9 /* QuizView.swift */,
 				7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */,
+				7D16DEE1287F4D9400C4F4A3 /* CardStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 				7DBDBDCA27BFFFBE006C9E09 /* StartCard.swift */,
 				1C775ED4F9ABEA9BD1416848 /* User.swift */,
 				7D92DBAD27C8FAFE00092ED4 /* Homework.swift */,
+				7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 			name = swiftui_app_template;
 			packageProductDependencies = (
 				7D21F9C4286CE7720077410F /* RiveRuntime */,
+				7D16DEDF287F4D0600C4F4A3 /* CardStack */,
 			);
 			productName = swiftui_app_template;
 			productReference = 18C708DE276777350023CC15 /* swiftui_app_template.app */;
@@ -352,6 +361,7 @@
 			mainGroup = 18C708D5276777350023CC15;
 			packageReferences = (
 				7D21F9C3286CE7720077410F /* XCRemoteSwiftPackageReference "rive-ios" */,
+				7D16DEDE287F4D0600C4F4A3 /* XCRemoteSwiftPackageReference "CardStack" */,
 			);
 			productRefGroup = 18C708DF276777350023CC15 /* Products */;
 			projectDirPath = "";
@@ -403,6 +413,7 @@
 				7D2800DA282C1CFC00CEBBA3 /* LaunchVC+Scene.swift in Sources */,
 				7D2800D1282C1CBF00CEBBA3 /* StartView.swift in Sources */,
 				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
+				7D16DEE4287F4E6D00C4F4A3 /* NewCards.swift in Sources */,
 				7D9FE21727C6574500B10AE3 /* AccountView.swift in Sources */,
 				7D186A2927A1F6C3008C0B12 /* FeaturedItem.swift in Sources */,
 				7D186A2727A1F66F008C0B12 /* HomeView.swift in Sources */,
@@ -411,6 +422,7 @@
 				7D91932927C00CA2007A596C /* ButtonItem.swift in Sources */,
 				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
 				7D2800E0282C1CFC00CEBBA3 /* LaunchConstants.swift in Sources */,
+				7D16DEE2287F4D9400C4F4A3 /* CardStackView.swift in Sources */,
 				7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */,
 				7D2800DE282C1CFC00CEBBA3 /* LaunchViewController.swift in Sources */,
 				7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */,
@@ -740,6 +752,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7D16DEDE287F4D0600C4F4A3 /* XCRemoteSwiftPackageReference "CardStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/notsobigcompany/CardStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		7D21F9C3286CE7720077410F /* XCRemoteSwiftPackageReference "rive-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/rive-app/rive-ios";
@@ -751,6 +771,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7D16DEDF287F4D0600C4F4A3 /* CardStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D16DEDE287F4D0600C4F4A3 /* XCRemoteSwiftPackageReference "CardStack" */;
+			productName = CardStack;
+		};
 		7D21F9C4286CE7720077410F /* RiveRuntime */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7D21F9C3286CE7720077410F /* XCRemoteSwiftPackageReference "rive-ios" */;
