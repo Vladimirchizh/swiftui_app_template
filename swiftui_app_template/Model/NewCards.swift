@@ -10,15 +10,15 @@ import SwiftUI
 struct NewCardsItem: Identifiable{
     var id = UUID()
     var color: Color
+    var text: String
+    var translate: String
 }
 
 
 
 var NewCardsItems = [
-    NewCardsItem(color: .teal),
-    NewCardsItem(color: .purple),
-    NewCardsItem(color: .mint),
-    NewCardsItem(color: .blue)
-
+    NewCardsItem(color: .teal, text: "serendipity", translate:  "интуиция"),
+    NewCardsItem(color: .purple, text: "explore", translate: "изучать"),
+    NewCardsItem(color: .mint, text: "interface", translate: "интерфейс"),
+    NewCardsItem(color: .blue, text: "library", translate: "библиотека")
 ]
-

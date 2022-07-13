@@ -37,19 +37,20 @@ struct QuizView: View {
     var body: some View {
         VStack {
             GeometryReader { geometry in
-                LinearGradient(gradient: Gradient(colors: [Color.init(#colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)), Color.init(#colorLiteral(red: 1, green: 0.9882352941, blue: 0.862745098, alpha: 1))]), startPoint: .bottom, endPoint: .top)
+                LinearGradient(gradient: Gradient(colors: [.teal, Color.init(#colorLiteral(red: 1, green: 0.9882352941, blue: 0.862745098, alpha: 1))]), startPoint: .bottom, endPoint: .top)
                     .frame(width: geometry.size.width * 1.5, height: geometry.size.height)
                     .background(Color.blue)
                     .clipShape(Circle())
                     .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
-                    .padding(-80)
+                    .padding(-140)
                 
                 VStack(spacing: 24) {
                     DateLongView()
-                    Spacer().frame(height: 5)
+                    
                     if !listAll{
+                        Spacer().frame(height: 80)
                         ZStack {
-                            ForEach(self.users, id: \.self) { user in
+                            /* ForEach(self.users, id: \.self) { user in
                                 Group {
                                     // Range Operator
                                     if (self.maxID - 3)...self.maxID ~= user.id {
@@ -62,9 +63,11 @@ struct QuizView: View {
                                             .offset(x: 0, y: self.getCardOffset(geometry, id: user.id))
                                         }
                                     }
-                                }
+                                } */
+                                
+                                CardStackView()
                             }
-                        Spacer() //.frame(height: 59)
+                        Spacer().frame(height: 64)
                         Button("Показать все слова") {
                             withAnimation{
                                 listAll.toggle()
@@ -82,7 +85,7 @@ struct QuizView: View {
                         }
                     
                     if listAll{
-                        // Spacer().frame(height: 5)
+                        Spacer().frame(height: 22)
                         //Text("Список слов")
                         List(cards){user in
                             HStack{
