@@ -25,7 +25,7 @@ var startCards = [
     ),
     StartCard(
         header: "Save your favorite words",
-        preheader: "Доступ к календарю занятий и домашним заданиям.",
+        preheader: "Добавляйте понравившиеся слова в избранное.",
         toptext: "your personal learning companion",
         gifimage: "fav"
     )

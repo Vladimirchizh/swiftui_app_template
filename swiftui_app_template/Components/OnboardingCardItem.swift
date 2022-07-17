@@ -25,7 +25,7 @@ struct OnboardingCardItem: View {
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.white)
-            GIFImage(name: "cards")
+            GIFImage(name: card.gifimage)
                 .frame(width: 300, height: 260, alignment: .leading)
             
             Text(card.preheader)
