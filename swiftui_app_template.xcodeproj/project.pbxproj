@@ -34,6 +34,11 @@
 		7D6B1A4527C6890E00FF5CB7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */; };
 		7D91932927C00CA2007A596C /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91932827C00CA2007A596C /* ButtonItem.swift */; };
 		7D92DBAE27C8FAFE00092ED4 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92DBAD27C8FAFE00092ED4 /* Homework.swift */; };
+		7D955AAF2883933F003A08EF /* SwiftUIGIF in Frameworks */ = {isa = PBXBuildFile; productRef = 7D955AAE2883933F003A08EF /* SwiftUIGIF */; };
+		7D955AB228839AEB003A08EF /* cards_AdobeExpress.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7D955AB128839AEB003A08EF /* cards_AdobeExpress.gif */; };
+		7D955AB528839DB4003A08EF /* cards.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7D955AB428839DB4003A08EF /* cards.gif */; };
+		7D955AB72883A34D003A08EF /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D955AB62883A34D003A08EF /* Videos.swift */; };
+		7D955AB92883A753003A08EF /* fav.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7D955AB82883A753003A08EF /* fav.gif */; };
 		7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419C27A7C819004D4D21 /* CourseItem.swift */; };
 		7D9A419F27A7C9FC004D4D21 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A419E27A7C9FC004D4D21 /* CourseView.swift */; };
 		7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9A41A027A7F435004D4D21 /* LavaItem.swift */; };
@@ -94,6 +99,11 @@
 		7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7D91932827C00CA2007A596C /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		7D92DBAD27C8FAFE00092ED4 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
+		7D955AB128839AEB003A08EF /* cards_AdobeExpress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cards_AdobeExpress.gif; sourceTree = "<group>"; };
+		7D955AB328839CA3003A08EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7D955AB428839DB4003A08EF /* cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cards.gif; sourceTree = "<group>"; };
+		7D955AB62883A34D003A08EF /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
+		7D955AB82883A753003A08EF /* fav.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fav.gif; sourceTree = "<group>"; };
 		7D9A419C27A7C819004D4D21 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		7D9A419E27A7C9FC004D4D21 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		7D9A41A027A7F435004D4D21 /* LavaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LavaItem.swift; sourceTree = "<group>"; };
@@ -113,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D21F9C5286CE7720077410F /* RiveRuntime in Frameworks */,
+				7D955AAF2883933F003A08EF /* SwiftUIGIF in Frameworks */,
 				7D16DEE0287F4D0600C4F4A3 /* CardStack in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +168,7 @@
 		18C708E0276777350023CC15 /* swiftui_app_template */ = {
 			isa = PBXGroup;
 			children = (
+				7D955AB028839AB6003A08EF /* Images */,
 				7D21F9CA286CEB020077410F /* RiveAssets */,
 				7D2800D2282C1CDE00CEBBA3 /* RealityKit */,
 				7D9E69C327A9584A00E54817 /* Model */,
@@ -168,6 +180,7 @@
 				18C708EA276777380023CC15 /* Info.plist */,
 				18C708E7276777380023CC15 /* Preview Content */,
 				7DEF700F27A707CD0001D414 /* FeaturedData.swift */,
+				7D955AB328839CA3003A08EF /* README.md */,
 			);
 			path = swiftui_app_template;
 			sourceTree = "<group>";
@@ -255,6 +268,16 @@
 			path = RealityKit;
 			sourceTree = "<group>";
 		};
+		7D955AB028839AB6003A08EF /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7D955AB82883A753003A08EF /* fav.gif */,
+				7D955AB428839DB4003A08EF /* cards.gif */,
+				7D955AB128839AEB003A08EF /* cards_AdobeExpress.gif */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		7D9E69C327A9584A00E54817 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +287,7 @@
 				1C775ED4F9ABEA9BD1416848 /* User.swift */,
 				7D92DBAD27C8FAFE00092ED4 /* Homework.swift */,
 				7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */,
+				7D955AB62883A34D003A08EF /* Videos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,6 +311,7 @@
 			packageProductDependencies = (
 				7D21F9C4286CE7720077410F /* RiveRuntime */,
 				7D16DEDF287F4D0600C4F4A3 /* CardStack */,
+				7D955AAE2883933F003A08EF /* SwiftUIGIF */,
 			);
 			productName = swiftui_app_template;
 			productReference = 18C708DE276777350023CC15 /* swiftui_app_template.app */;
@@ -362,6 +387,7 @@
 			packageReferences = (
 				7D21F9C3286CE7720077410F /* XCRemoteSwiftPackageReference "rive-ios" */,
 				7D16DEDE287F4D0600C4F4A3 /* XCRemoteSwiftPackageReference "CardStack" */,
+				7D955AAD2883933F003A08EF /* XCRemoteSwiftPackageReference "swiftui-gif" */,
 			);
 			productRefGroup = 18C708DF276777350023CC15 /* Products */;
 			projectDirPath = "";
@@ -379,9 +405,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D955AB92883A753003A08EF /* fav.gif in Resources */,
+				7D955AB528839DB4003A08EF /* cards.gif in Resources */,
 				18C708E9276777380023CC15 /* Preview Assets.xcassets in Resources */,
 				7D21F9C7286CEAE30077410F /* menu_buttons.riv in Resources */,
 				18C708E6276777380023CC15 /* Assets.xcassets in Resources */,
+				7D955AB228839AEB003A08EF /* cards_AdobeExpress.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +440,7 @@
 				7DBDBDCB27BFFFBE006C9E09 /* StartCard.swift in Sources */,
 				7D92DBAE27C8FAFE00092ED4 /* Homework.swift in Sources */,
 				7D2800DA282C1CFC00CEBBA3 /* LaunchVC+Scene.swift in Sources */,
+				7D955AB72883A34D003A08EF /* Videos.swift in Sources */,
 				7D2800D1282C1CBF00CEBBA3 /* StartView.swift in Sources */,
 				7D9A41A127A7F435004D4D21 /* LavaItem.swift in Sources */,
 				7D16DEE4287F4E6D00C4F4A3 /* NewCards.swift in Sources */,
@@ -768,6 +798,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		7D955AAD2883933F003A08EF /* XCRemoteSwiftPackageReference "swiftui-gif" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/globulus/swiftui-gif";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -780,6 +818,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D21F9C3286CE7720077410F /* XCRemoteSwiftPackageReference "rive-ios" */;
 			productName = RiveRuntime;
+		};
+		7D955AAE2883933F003A08EF /* SwiftUIGIF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D955AAD2883933F003A08EF /* XCRemoteSwiftPackageReference "swiftui-gif" */;
+			productName = SwiftUIGIF;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

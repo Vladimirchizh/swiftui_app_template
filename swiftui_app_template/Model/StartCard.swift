@@ -13,11 +13,22 @@ struct StartCard: Identifiable{
     var header: String
     var preheader: String
     var toptext: String
+    var gifimage: String
 }
 
 var startCards = [
-    StartCard(header: "Learn \nEnglish \nwith H&S", preheader: "Учите английский вместе с нами теперь еще и с помощью приложени HOP&SCOTCH app.", toptext: "your personal learning companion"),
-    StartCard(header: "Your \nhomework - \njust in time", preheader: "Доступ к расписанию, домашним заданиям и интерактивным карточкам всегда вместе с вами.", toptext: "study on the go")
+    StartCard(
+        header: "Learn English with Cards",
+        preheader: "Учите английский вместе с нами теперь еще и с помощью интерактивных карточек.",
+        toptext: "study on the go",
+        gifimage: "cards"
+    ),
+    StartCard(
+        header: "Save your favorite words",
+        preheader: "Доступ к календарю занятий и домашним заданиям.",
+        toptext: "your personal learning companion",
+        gifimage: "fav"
+    )
 ]
 
 

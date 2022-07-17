@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
-
+import SwiftUIGIF
 
 
 struct OnboardingCardItem: View {
     var card: StartCard = startCards[0]
+    @State private var imageData: Data? = nil
+
     var body: some View {
         VStack(alignment: .leading, spacing: 16){
             Text(card.toptext.uppercased())
@@ -23,7 +25,9 @@ struct OnboardingCardItem: View {
                 .bold()
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(Color.white)
-                
+            GIFImage(name: "cards")
+                .frame(width: 300, height: 260, alignment: .leading)
+            
             Text(card.preheader)
                 .font(.subheadline)
                 .foregroundColor(Color.white)
@@ -37,6 +41,7 @@ struct OnboardingCardItem: View {
         .shadow(radius: 10)
         
     }
+    
 }
 
 
