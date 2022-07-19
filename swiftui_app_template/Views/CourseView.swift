@@ -11,7 +11,7 @@ struct CourseView: View {
     
     @Binding var show: Bool
     var namespace: Namespace.ID
-    
+    var videos: [Video] = VideoList.topTen
     var body: some View {
         ZStack {
             ScrollView {
@@ -61,12 +61,33 @@ struct CourseView: View {
                 Text("для самостоятельного изучения".uppercased())
                     .font(.footnote.weight(.semibold))
                     .matchedGeometryEffect(id: "subtitle", in: namespace)
-                Text("Новые карточки")
+                /* Text("Новые карточки")
                     .font(.largeTitle)
                     .matchedGeometryEffect(id: "title", in: namespace)
                     .frame(maxWidth: .infinity,
-                           alignment: .leading)
+                           alignment: .leading)*/
                 Divider()
+                NavigationView{
+                    List(videos, id: \.id){ video in
+                        Image(video.imageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 100)
+                            .cornerRadius(12)
+                            .padding(.vertical, 4)
+                        VStack(alignment: .leading, spacing: 5){
+                            Text(video.title)
+                                .fontWeight(.semibold)
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.5)
+                            Text(video.uploadDate)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        
+                    }.background(Rectangle().fill(.ultraThinMaterial))
+                }
+                
                 HStack{
                     Image("Avatar Default")
                         .resizable()
@@ -88,6 +109,7 @@ struct CourseView: View {
                 .padding(20)
             
         )
+        
     }
 }
 
