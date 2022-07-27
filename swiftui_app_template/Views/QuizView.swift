@@ -11,7 +11,8 @@ import SwiftUI
 struct QuizView: View {
     /// List of users
     @State var users: [Card] = cards
-    
+    @State private var showFavorite = false
+
     /// Return the CardViews width for the given offset in the array
     /// - Parameters:
     ///   - geometry: The geometry proxy of the parent
@@ -32,7 +33,7 @@ struct QuizView: View {
     private var maxID: Int {
         return self.users.map { $0.id }.max() ?? 0
     }
-    
+    // private var favs: Array<Card>
     @State private var listAll = false
     var body: some View {
         VStack {
@@ -42,7 +43,7 @@ struct QuizView: View {
                     .background(Color.blue)
                     .clipShape(Circle())
                     .offset(x: -geometry.size.width / 4, y: -geometry.size.height / 2)
-                    .padding(-140)
+                    .padding(-120)
                 
                 VStack(spacing: 24) {
                     DateLongView()
@@ -85,7 +86,14 @@ struct QuizView: View {
                         }
                     
                     if listAll{
-                        Spacer().frame(height: 22)
+                        // Spacer().frame(height: 22)
+                        HStack{
+                            Spacer()
+                            Text("Избранные").font(.title2).frame(width:.infinity).foregroundColor(.white)
+                            Toggle("", isOn: $showFavorite)
+                                            .toggleStyle(SwitchToggleStyle(tint: .teal))
+                        }
+                        
                         //Text("Список слов")
                         List(cards){user in
                             HStack{
@@ -94,8 +102,10 @@ struct QuizView: View {
                                 Text(user.translate)}
                         }
                         .cornerRadius(20)
-                        .frame(height: 400)
+                        .frame(height: 380)
                         Spacer()
+                        
+                        
                         Button("Показать карточки") {
                             withAnimation{
                                 listAll.toggle()
