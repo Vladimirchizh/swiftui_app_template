@@ -11,18 +11,19 @@ struct CourseItem: View {
     
     @Binding var show: Bool
     var namespace: Namespace.ID
+    var feed: FeedItem
     
     var body: some View {
         
         VStack{
             Spacer()
             VStack(alignment:.leading, spacing: 12) {
-                Text("Новые карточки")
+                Text(feed.headline)
                     .font(.largeTitle)
                     .matchedGeometryEffect(id: "title", in: namespace)
                     .frame(maxWidth: .infinity,
                        alignment: .leading)
-                Text("для самостоятельного изучения".uppercased())
+                Text(feed.subhead.uppercased())
                     .font(.footnote.weight(.semibold))
                     .matchedGeometryEffect(id: "subtitle", in: namespace)
             }
@@ -37,7 +38,7 @@ struct CourseItem: View {
             
         }
         .foregroundColor(.white)
-        .background(Image("Group 15")
+        .background(Image(feed.picture)
                         .resizable()
                         .aspectRatio(contentMode: .fit )
                         .matchedGeometryEffect(id: "image", in: namespace)
@@ -59,6 +60,6 @@ struct CourseItem: View {
 struct CourseItem_Previews: PreviewProvider {
     @Namespace static var namespace
     static var previews: some View {
-        CourseItem(show: .constant(true), namespace: namespace)
+        CourseItem(show: .constant(true), namespace: namespace, feed: FeedItem(picture: "Group 15", headline: "Lingua Trip: YouTube", subhead: "Новые видео на канале"))
     }
 }

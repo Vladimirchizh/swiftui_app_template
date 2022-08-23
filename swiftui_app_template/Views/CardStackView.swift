@@ -38,10 +38,11 @@ struct CardStackView: View {
                             DispatchQueue.main.asyncAfter(deadline:.now()+1){
                                 try? it.setInput("active", value: false)
                             }
+                        
                         } label: {
                             VStack(spacing: 0) {
                                 it.view()
-                                    .frame(width: 30, height: 30)
+                                    .frame(width: 40, height: 40)
                                 }
                             }
                         .frame(height: 300, alignment: .bottom)

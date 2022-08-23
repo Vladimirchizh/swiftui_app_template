@@ -38,78 +38,85 @@ struct CourseView: View {
     }
     var cover: some View{
         VStack{
-            Spacer()
-        }
-        .frame(maxWidth: .infinity)
-        .frame(height:500)
-        .foregroundColor(.black)
-        .background(Image("Group 15")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill )
-                        .matchedGeometryEffect(id: "image", in: namespace)
-                    )
-        .background(LavaItem()
-                        .rotationEffect(.degrees(180.0))
-                        .aspectRatio(contentMode: .fill )
-                        .matchedGeometryEffect(id: "background", in: namespace)
-                    )
-        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
-                .matchedGeometryEffect(id: "mask", in: namespace)
-        )
-        .overlay(
-            VStack(alignment:.leading, spacing: 12){
-                Text("для самостоятельного изучения".uppercased())
-                    .font(.footnote.weight(.semibold))
-                    .matchedGeometryEffect(id: "subtitle", in: namespace)
-                /* Text("Новые карточки")
-                    .font(.largeTitle)
-                    .matchedGeometryEffect(id: "title", in: namespace)
-                    .frame(maxWidth: .infinity,
-                           alignment: .leading)*/
-                Divider()
-                NavigationView{
-                    List(videos, id: \.id){ video in
-                        Image(video.imageName)
+            VStack{
+                Spacer()
+            }
+            .frame(maxWidth: .infinity)
+            .frame(height:500)
+            .foregroundColor(.black)
+            .background(Image("Group 45")
                             .resizable()
-                            .scaledToFit()
-                            .frame(height: 100)
-                            .cornerRadius(12)
-                            .padding(.vertical, 4)
-                        VStack(alignment: .leading, spacing: 5){
-                            Text(video.title)
-                                .fontWeight(.semibold)
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.5)
-                            Text(video.uploadDate)
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                        }
-                        
-                    }.background(Rectangle().fill(.ultraThinMaterial))
+                            .aspectRatio(contentMode: .fill )
+                            .matchedGeometryEffect(id: "image", in: namespace)
+                        )
+            .background(LavaItem()
+                            .rotationEffect(.degrees(180.0))
+                            .aspectRatio(contentMode: .fill )
+                            .matchedGeometryEffect(id: "background", in: namespace)
+                        )
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous)
+                    .matchedGeometryEffect(id: "mask", in: namespace)
+            )
+            .overlay(
+                VStack(alignment:.leading, spacing: 12){
+                    Text("Новые видео на канале".uppercased())
+                        .font(.footnote.weight(.semibold))
+                        .matchedGeometryEffect(id: "subtitle", in: namespace)
+                    Divider()
+                    Text("Lingua trip: YouTube")
+                        .font(.largeTitle)
+                        .matchedGeometryEffect(id: "title", in: namespace)
+                        .frame(maxWidth: .infinity,
+                               alignment: .leading)
+                    
+                    
+                    
+                    
+                    
                 }
+                    .padding(20)
+                    .background(
+                            Rectangle()
+                                .fill(.ultraThinMaterial)
+                                .mask(RoundedRectangle(cornerRadius: 30,style: .continuous))
+                                .matchedGeometryEffect(id: "blur", in: namespace)
+                        )
+                    .offset(y:250)
+                    .padding(20)
                 
+            )
+            Spacer().frame(height: 80)
+            ForEach(videos, id: \.id){ video in
                 HStack{
-                    Image("Avatar Default")
+                    Image(video.imageName)
                         .resizable()
-                        .frame(width: 26, height: 26)
-                        .cornerRadius(10)
-                    
-                    
+                        .scaledToFit()
+                        .frame(height: 100)
+                        .cornerRadius(12)
+                        .padding(.vertical, 4)
+                    VStack(alignment: .leading, spacing: 5){
+                        Text(video.title)
+                            .fontWeight(.semibold)
+                            .lineLimit(2)
+                            // .minimumScaleFactor(0.5)
+                        Text(video.uploadDate)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        Text(String(video.viewCount))
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .minimumScaleFactor(0.6)
+                    }
                 }
+                .padding(.horizontal, 7)
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 
             }
-                .padding(20)
-                .background(
-                        Rectangle()
-                            .fill(.ultraThinMaterial)
-                            .mask(RoundedRectangle(cornerRadius: 30,style: .continuous))
-                            .matchedGeometryEffect(id: "blur", in: namespace)
-                    )
-                .offset(y:250)
-                .padding(20)
             
-        )
-        
+            
+            
+        }
+        .background(.white)
     }
 }
 

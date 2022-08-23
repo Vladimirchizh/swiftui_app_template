@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @Namespace var namespace
+    @Namespace var namespace_2
     @State var show = false
     @State var hasScrolled = false
     @State private var animate = false
@@ -49,9 +50,10 @@ struct HomeView: View {
                         .frame(maxWidth: .infinity,
                            alignment: .leading)
                         .padding(.horizontal, 30)
-                
-                if !show {
-                    CourseItem(show: $show, namespace: namespace)
+                VStack{
+                    if !show {
+                        
+                        CourseItem(show: $show, namespace: namespace, feed: FeedItem(picture: "Group 45", headline: "LinguaTrip: YouTube", subhead: "Новые видео на канале"))
                             .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
                             .onTapGesture {
                                 withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
@@ -59,12 +61,17 @@ struct HomeView: View {
 
                                 }
                             }
-
+                            
+                        
+                    }
+                    
                 }
-
-            }
-            if show {
-                CourseView(show: $show, namespace: namespace)
+                if show {
+                    CourseView(show: $show, namespace: namespace)
+                }
+                CourseItem(show: .constant(true), namespace: namespace_2,
+                           feed: FeedItem(picture: "Group 106", headline: "Языковые курсы", subhead: "Найди и забронируй в приложении"))
+                        .shadow(color: Color("Shadow").opacity(0.3), radius: 10, x: 0, y: 10)
             }
         }
     }

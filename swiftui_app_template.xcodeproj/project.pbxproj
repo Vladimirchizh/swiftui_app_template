@@ -31,6 +31,7 @@
 		7D2800DE282C1CFC00CEBBA3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2800D7282C1CFC00CEBBA3 /* LaunchViewController.swift */; };
 		7D2800DF282C1CFC00CEBBA3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2800D8282C1CFC00CEBBA3 /* Utilities.swift */; };
 		7D2800E0282C1CFC00CEBBA3 /* LaunchConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2800D9282C1CFC00CEBBA3 /* LaunchConstants.swift */; };
+		7D4E5BA628B57F400088D53B /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4E5BA528B57F400088D53B /* Feed.swift */; };
 		7D6B1A4527C6890E00FF5CB7 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */; };
 		7D91932927C00CA2007A596C /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D91932827C00CA2007A596C /* ButtonItem.swift */; };
 		7D92DBAE27C8FAFE00092ED4 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D92DBAD27C8FAFE00092ED4 /* Homework.swift */; };
@@ -96,6 +97,7 @@
 		7D2800D7282C1CFC00CEBBA3 /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		7D2800D8282C1CFC00CEBBA3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		7D2800D9282C1CFC00CEBBA3 /* LaunchConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchConstants.swift; sourceTree = "<group>"; };
+		7D4E5BA528B57F400088D53B /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		7D6B1A4427C6890E00FF5CB7 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		7D91932827C00CA2007A596C /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		7D92DBAD27C8FAFE00092ED4 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				7D92DBAD27C8FAFE00092ED4 /* Homework.swift */,
 				7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */,
 				7D955AB62883A34D003A08EF /* Videos.swift */,
+				7D4E5BA528B57F400088D53B /* Feed.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				7DEF701027A707CD0001D414 /* FeaturedData.swift in Sources */,
 				7D2800E0282C1CFC00CEBBA3 /* LaunchConstants.swift in Sources */,
 				7D16DEE2287F4D9400C4F4A3 /* CardStackView.swift in Sources */,
+				7D4E5BA628B57F400088D53B /* Feed.swift in Sources */,
 				7DB923B827BFEFAA00619FD8 /* OnboardingView.swift in Sources */,
 				7D2800DE282C1CFC00CEBBA3 /* LaunchViewController.swift in Sources */,
 				7D9A419D27A7C819004D4D21 /* CourseItem.swift in Sources */,
