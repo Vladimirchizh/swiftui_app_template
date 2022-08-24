@@ -15,6 +15,7 @@
 		1C775175F084D81E3F69508F /* OnboardingCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */; };
 		1C7751E88D1A6A4D0F66011E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775ED4F9ABEA9BD1416848 /* User.swift */; };
 		1C7757411051EC2712DB994C /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C775B318043546A894B7FB9 /* QuizView.swift */; };
+		1C775DA3F8ABD3641BF538C9 /* preview.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1C7752226C6F808592229A95 /* preview.jpeg */; };
 		7D16DEE0287F4D0600C4F4A3 /* CardStack in Frameworks */ = {isa = PBXBuildFile; productRef = 7D16DEDF287F4D0600C4F4A3 /* CardStack */; };
 		7D16DEE2287F4D9400C4F4A3 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16DEE1287F4D9400C4F4A3 /* CardStackView.swift */; };
 		7D16DEE4287F4E6D00C4F4A3 /* NewCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16DEE3287F4E6D00C4F4A3 /* NewCards.swift */; };
@@ -71,17 +72,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18C708DE276777350023CC15 /* swiftui_app_template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftui_app_template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C708E1276777350023CC15 /* swiftui_app_templateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_app_templateApp.swift; sourceTree = "<group>"; };
 		18C708E5276777380023CC15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18C708E8276777380023CC15 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18C708EA276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18C708EF276777380023CC15 /* swiftui_app_templateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftui_app_templateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C708F3276777380023CC15 /* swiftui_app_templateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_app_templateTests.swift; sourceTree = "<group>"; };
 		18C708F5276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18C708FA276777380023CC15 /* swiftui_app_templateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftui_app_templateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18C708FE276777380023CC15 /* swiftui_app_templateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_app_templateUITests.swift; sourceTree = "<group>"; };
 		18C70900276777380023CC15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C7752226C6F808592229A95 /* preview.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = preview.jpeg; sourceTree = "<group>"; };
 		1C77590BF40AEADA6EAE3E45 /* OnboardingCardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingCardItem.swift; sourceTree = "<group>"; };
 		1C775B318043546A894B7FB9 /* QuizView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		1C775ED4F9ABEA9BD1416848 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		7D91932827C00CA2007A596C /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		7D92DBAD27C8FAFE00092ED4 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 		7D955AB128839AEB003A08EF /* cards_AdobeExpress.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cards_AdobeExpress.gif; sourceTree = "<group>"; };
-		7D955AB328839CA3003A08EF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D955AB428839DB4003A08EF /* cards.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cards.gif; sourceTree = "<group>"; };
 		7D955AB62883A34D003A08EF /* Videos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
 		7D955AB82883A753003A08EF /* fav.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fav.gif; sourceTree = "<group>"; };
@@ -153,18 +151,8 @@
 				18C708E0276777350023CC15 /* swiftui_app_template */,
 				18C708F2276777380023CC15 /* swiftui_app_templateTests */,
 				18C708FD276777380023CC15 /* swiftui_app_templateUITests */,
-				18C708DF276777350023CC15 /* Products */,
+				1C775FB865D511D3E27C93EB /* preview_pic */,
 			);
-			sourceTree = "<group>";
-		};
-		18C708DF276777350023CC15 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				18C708DE276777350023CC15 /* swiftui_app_template.app */,
-				18C708EF276777380023CC15 /* swiftui_app_templateTests.xctest */,
-				18C708FA276777380023CC15 /* swiftui_app_templateUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		18C708E0276777350023CC15 /* swiftui_app_template */ = {
@@ -182,7 +170,6 @@
 				18C708EA276777380023CC15 /* Info.plist */,
 				18C708E7276777380023CC15 /* Preview Content */,
 				7DEF700F27A707CD0001D414 /* FeaturedData.swift */,
-				7D955AB328839CA3003A08EF /* README.md */,
 			);
 			path = swiftui_app_template;
 			sourceTree = "<group>";
@@ -211,6 +198,14 @@
 				18C70900276777380023CC15 /* Info.plist */,
 			);
 			path = swiftui_app_templateUITests;
+			sourceTree = "<group>";
+		};
+		1C775FB865D511D3E27C93EB /* preview_pic */ = {
+			isa = PBXGroup;
+			children = (
+				1C7752226C6F808592229A95 /* preview.jpeg */,
+			);
+			path = preview_pic;
 			sourceTree = "<group>";
 		};
 		7D186A2327A1EB77008C0B12 /* Views */ = {
@@ -317,7 +312,6 @@
 				7D955AAE2883933F003A08EF /* SwiftUIGIF */,
 			);
 			productName = swiftui_app_template;
-			productReference = 18C708DE276777350023CC15 /* swiftui_app_template.app */;
 			productType = "com.apple.product-type.application";
 		};
 		18C708EE276777380023CC15 /* swiftui_app_templateTests */ = {
@@ -335,7 +329,6 @@
 			);
 			name = swiftui_app_templateTests;
 			productName = swiftui_app_templateTests;
-			productReference = 18C708EF276777380023CC15 /* swiftui_app_templateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		18C708F9276777380023CC15 /* swiftui_app_templateUITests */ = {
@@ -353,7 +346,6 @@
 			);
 			name = swiftui_app_templateUITests;
 			productName = swiftui_app_templateUITests;
-			productReference = 18C708FA276777380023CC15 /* swiftui_app_templateUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +384,6 @@
 				7D16DEDE287F4D0600C4F4A3 /* XCRemoteSwiftPackageReference "CardStack" */,
 				7D955AAD2883933F003A08EF /* XCRemoteSwiftPackageReference "swiftui-gif" */,
 			);
-			productRefGroup = 18C708DF276777350023CC15 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -414,6 +405,7 @@
 				7D21F9C7286CEAE30077410F /* menu_buttons.riv in Resources */,
 				18C708E6276777380023CC15 /* Assets.xcassets in Resources */,
 				7D955AB228839AEB003A08EF /* cards_AdobeExpress.gif in Resources */,
+				1C775DA3F8ABD3641BF538C9 /* preview.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
